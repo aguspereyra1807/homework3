@@ -20,8 +20,11 @@ void Pressure::deserialize(std::ifstream& in) {
 }
 
 void Pressure::print() const {
-    std::cout << "Presión Estática: " << staticPressure << "\n" << "Presión Dinámica: " << dynamicPressure << std::endl;
+    std::cout << "PRESIÓN (t = " << *measureTime << ")" << std::endl;
+    std::cout << "Presión Estática: " << staticPressure << "\n" 
+              << "Presión Dinámica: " << dynamicPressure << std::endl;
 }
+
 // Position
 
 Position::Position(float lat, float lon, float alt, float t): BaseMeasurement(t) {
@@ -44,3 +47,9 @@ void Position::deserialize(std::ifstream& in) {
     in.read(reinterpret_cast<char*>(&altitude), sizeof(altitude));
 }
 
+void Position::print() const {
+    std::cout << "POSICIÓN (t = " << *measureTime << ")" << std::endl;
+    std::cout << "- Latitud: " << latitude << "\n" 
+              << "- Longitud: " << longitude << "\n" 
+              << "- Altitud: " << altitude << std::endl;
+}
