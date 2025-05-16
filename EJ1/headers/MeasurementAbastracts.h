@@ -20,4 +20,4 @@ class BaseMeasurement: public MeasurementI {
     
     protected:
         std::unique_ptr<float> measureTime;
-}; 
+};

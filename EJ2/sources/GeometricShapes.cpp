@@ -1,4 +1,3 @@
-#pragma once
 #include "../headers/GeometricShapes.h"
 
 // Point
@@ -40,24 +39,24 @@ void Circle::setRadius(float r) {
 
 // Elipse
 
-Elipse::Elipse(float x, float y, float a, float b): Point(x,y) {
+Ellipse::Ellipse(float x, float y, float a, float b): Point(x,y) {
     semiMajorAxis = a;
     semiMinorAxis = b;
 }
 
-float Elipse::getA() const {
+float Ellipse::getA() const {
     return semiMajorAxis;
 }
 
-float Elipse::getB() const {
+float Ellipse::getB() const {
     return semiMinorAxis;
 }
 
-void Elipse::setA(float a) {
+void Ellipse::setA(float a) {
     semiMajorAxis = a;
 }
 
-void Elipse::setB(float b) {
+void Ellipse::setB(float b) {
     semiMinorAxis = b;
 }
 

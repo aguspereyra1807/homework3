@@ -1,3 +1,4 @@
+#pragma once
 class Point {
     public:
         Point(float x, float y);
@@ -21,9 +22,9 @@ class Circle: public Point {
         float radius;
 };
 
-class Elipse: public Point {
+class Ellipse: public Point {
     public:
-        Elipse(float x, float y, float a, float b);
+        Ellipse(float x, float y, float a, float b);
         float getA() const;
         float getB() const;
         void setA(float a);
