@@ -12,6 +12,7 @@ class Point {
         float coordY;
 };
 
+// Todas heredan del punto porque tienen lo básico del punto (coordenadas)
 class Circle: public Point {
     public:
         Circle(float x, float y, float r);
@@ -43,6 +44,7 @@ class Rectangle: public Point {
         void setBase(float b);
         void setHeight(float h);
     
+        Point leftDownCorner; 
     private:
         float base;
         float height;

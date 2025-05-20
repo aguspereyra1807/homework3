@@ -63,7 +63,7 @@ void Ellipse::setB(float b) {
 // Rectangle
 
 Rectangle::Rectangle(float x, float y, float b, float h): 
-    Point(x-(b/2), y-(h/2)) // Suponiendo que (x,y) son las coordenadas del centro, así (x,y) ahora pertenecen al vértice inferior izquierdo
+    Point(x,y), leftDownCorner(Point(x-(b/2), y-(h/2))) // Asumo que (x,y) son las coordenadas del centro
     {
         base = b;
         height = h;

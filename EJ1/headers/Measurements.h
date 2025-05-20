@@ -1,7 +1,7 @@
 #pragma once
 #include "MeasurementAbastracts.h"
 
-class Pressure: public BaseMeasurement {
+class Pressure: public BaseMeasurement { // Presión
     public:
         Pressure(float p, float q, float t);
         void serialize(std::ofstream& out) const override;
@@ -12,7 +12,7 @@ class Pressure: public BaseMeasurement {
         float dynamicPressure; // q
 };
 
-class Position: public BaseMeasurement {
+class Position: public BaseMeasurement { // Posición
     public:
         Position(float lat, float lon, float alt, float t);
         void serialize(std::ofstream& out) const override;
@@ -23,3 +23,5 @@ class Position: public BaseMeasurement {
         float longitude;
         float altitude;
 };
+
+// ambas sobreescriben serialize y deserialize y un print propio

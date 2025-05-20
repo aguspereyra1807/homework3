@@ -1,14 +1,16 @@
 #include "headers/SaveFlightData.h"
 
-int main() {
+int main() { 
+    // Test 1 (pedido por inciso b)
     std::cout << "====================================" << std::endl;
-    std::cout << "TEST 1 (.print() del inciso b)" << "\n" << "====================================\n" << std::endl;
+    std::cout << "TEST 1" << "\n" << "====================================\n" << std::endl;
     Position position(-34.6f, -58.4f, 950.0f, 5.3);
     Pressure pressure(101.3f, 5.8f, 6.1f);
 
     SaveFlightData fd1 = SaveFlightData(position, pressure);
     fd1.print();
 
+    // Test 2 (prueba de serialización y deserialización)
     std::cout << "\n====================================" << std::endl;
     std::cout << "TEST 2 (serialización y deserialización)" << "\n" << "====================================" << std::endl;
 

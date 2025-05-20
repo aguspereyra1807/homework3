@@ -10,7 +10,7 @@ class MeasurementI { // Interfaz Medidas
         ~MeasurementI();
 };
 
-class BaseMeasurement: public MeasurementI {
+class BaseMeasurement: public MeasurementI { // Clase Abstracta
     public:
         BaseMeasurement(float t);
         float getTime() const;
