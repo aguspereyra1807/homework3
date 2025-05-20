@@ -2,20 +2,20 @@
 
 int main() {
     std::cout << "====================================" << std::endl;
-    std::cout << "TEST 1" << "\n" << "====================================\n" << std::endl;
+    std::cout << "TEST 1 (.print() del inciso b)" << "\n" << "====================================\n" << std::endl;
     Position position(-34.6f, -58.4f, 950.0f, 5.3);
     Pressure pressure(101.3f, 5.8f, 6.1f);
 
-    position.print();
-    pressure.print();
+    SaveFlightData fd1 = SaveFlightData(position, pressure);
+    fd1.print();
 
     std::cout << "\n====================================" << std::endl;
-    std::cout << "TEST 2" << "\n" << "====================================" << std::endl;
+    std::cout << "TEST 2 (serialización y deserialización)" << "\n" << "====================================" << std::endl;
 
     Position position2(0, 0, 0, 0);
     Pressure pressure2(0, 0, 0);
 
-    SaveFlightData fd1 = SaveFlightData(position, pressure);
+    
     SaveFlightData fd2 = SaveFlightData(position2, pressure2);
 
     std::cout << "\nSe crearon correctamente 2 'SaveFlightData':" << std::endl;
