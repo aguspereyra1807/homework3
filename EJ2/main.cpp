@@ -11,5 +11,5 @@ int main() {
     std::cout << "Área del punto " << ShapeProcessor::area(point) << std::endl;
     std::cout << "Área del círculo " << ShapeProcessor::area(circle) << std::endl;
     std::cout << "Área de la elipse " << ShapeProcessor::area(ellipse) << std::endl;
-    std::cout << "Área del rectángulo " << ShapeProcessor::area(rectangle) << std::endl; /
+    std::cout << "Área del rectángulo " << ShapeProcessor::area(rectangle) << std::endl;
 }
