@@ -7,7 +7,7 @@ void Class2::createJSON(std::ostream& out) const {
     strings.writeValues(out);
     out << ",\n" << "\t\"listas\" : ";
     array.writeValues(out);
-    out << "\n}";
+    out << "\n}" << std::endl;
 }
 
 // Reutiliza createJSON con std::cout como ostream para imprimir lo mismo en consola
